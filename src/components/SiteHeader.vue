@@ -19,6 +19,7 @@ export default {
     display: flex;
     justify-content: space-between;
     background-color: grey;
+    
         .logo {
             width: 90px;
             height: 90px;
