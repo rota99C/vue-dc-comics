@@ -56,7 +56,7 @@
     </div>
     <div></div>
     <div class="footer-contacts">
-      <div class="container">
+      <div class="container-footer">
         <div class="sign-up"><a>SIGN-UP NOW!</a></div>
         <div class="social">
           <h3>FOLLOW US</h3>
@@ -133,6 +133,7 @@ export default {};
           position: absolute;
           top: -130px;
           width: 100%;
+          height: auto;
         }
       }
     }
@@ -141,7 +142,7 @@ export default {};
     height: 110px;
     background-color: #303030;
 
-    div.container {
+    div.container-footer {
       width: 1000px;
       margin: auto;
       height: 100%;
@@ -167,6 +168,8 @@ export default {};
 
         img {
           margin: 0px 10px;
+          width: auto;
+          height: auto;
         }
       }
     }
