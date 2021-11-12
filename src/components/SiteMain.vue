@@ -4,10 +4,17 @@
       <p><strong>CURRENT SERIES</strong></p>
     </div>
     <div class="content-goes">
-      <Product v-for="comic in comics" :key="comic.title" :image="thumb.src" />
-        <img :src="thumb" alt="" />
-        <h3>{{ series }}</h3>
+      <div class="container">
+        <Product
+          v-for="comic in comics"
+          :key="comic.title"
+          :image="comic.thumb"
+          :series="comic.series"
+        />
       </div>
+
+      <!-- <img :src="comic.thumb" alt="" /> -->
+      <!-- <h3>{{ comic.series }}</h3> -->
     </div>
     <div class="content-cards">
       <div>
@@ -49,7 +56,11 @@
 </template>
 
 <script>
+import Product from "@/components/Product.vue";
 export default {
+  components: {
+    Product,
+  },
   data() {
     return {
       comics: [
@@ -64,7 +75,8 @@ export default {
           thumb:
             "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2020/09/AV1976_01_300-001_HD_5f738f6e39ddd7.18205602.jpg?itok=VgdYdJ01",
           price: "$3.99",
-          series: "American Vampire 1976",
+          series: `American 
+          Vampire 1976`,
           type: "comic book",
         },
         {
@@ -146,7 +158,6 @@ export default {
 <style lang="scss">
 #site-main {
   width: 100%;
-  height: 215px;
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   .current-serie {
@@ -158,7 +169,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 240px;
+    left: 370px;
     top: 418px;
     background-color: #0282f9;
     background-repeat: no-repeat;
@@ -169,18 +180,16 @@ export default {
   }
 
   .content-goes {
-    height: 95px;
+    height: auto;
     background-color: black;
-    position: relative;
+    display: flex;
 
-    div {
+    div.container {
       width: 1000px;
       margin: auto;
-
-      h2 {
-        color: white;
-        line-height: 95px;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      height: 100%;
     }
   }
 
