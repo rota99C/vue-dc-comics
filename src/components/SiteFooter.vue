@@ -56,17 +56,17 @@
     </div>
     <div></div>
     <div class="footer-contacts">
-        <div class="container">
-            <div class="sign-up"><a>SIGN-UP NOW!</a></div>
-            <div class="social">
-                <h3>FOLLOW US</h3>
-                <img src="../assets/img/footer-facebook.png" alt="">
-                <img src="../assets/img/footer-twitter.png" alt="">
-                <img src="../assets/img/footer-youtube.png" alt="">
-                <img src="../assets/img/footer-pinterest.png" alt="">
-                <img src="../assets/img/footer-periscope.png" alt="">
-            </div>
+      <div class="container">
+        <div class="sign-up"><a>SIGN-UP NOW!</a></div>
+        <div class="social">
+          <h3>FOLLOW US</h3>
+          <img src="../assets/img/footer-facebook.png" alt="" />
+          <img src="../assets/img/footer-twitter.png" alt="" />
+          <img src="../assets/img/footer-youtube.png" alt="" />
+          <img src="../assets/img/footer-pinterest.png" alt="" />
+          <img src="../assets/img/footer-periscope.png" alt="" />
         </div>
+      </div>
     </div>
   </footer>
 </template>
@@ -79,9 +79,7 @@ export default {};
 #site-footer {
   width: 100%;
   height: 360px;
-  background-color: lightgreen;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  
 
   .footer-navbar {
     height: 270px;
@@ -99,28 +97,30 @@ export default {};
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        padding: 30px 0px;
 
         h3 {
-            color: white;
+          color: white;
         }
 
         div.list {
-            flex-grow: 3;
+          flex-grow: 1;
         }
 
         ul {
-            li {
-                list-style-type: none;
-                color: #82827F;
+          li {
+            list-style-type: none;
+            color: #82827f;
+            font-size: 0.8em;
 
-                a {
-                    text-decoration: none;
-                }
-
-                a:visited {
-                    color: #82827F;
-                }
+            a {
+              text-decoration: none;
             }
+
+            a:visited {
+              color: #82827f;
+            }
+          }
         }
       }
 
@@ -142,34 +142,33 @@ export default {};
     background-color: #303030;
 
     div.container {
-        width: 1000px;
-        margin: auto;
-        height: 100%;
+      width: 1000px;
+      margin: auto;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div.sign-up {
+        color: white;
+        padding: 10px;
+        border: 2px solid #0282f9;
+        height: auto;
+      }
+
+      div.social {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        div.sign-up {
-            color: white;
-            padding: 10px;
-            border: 2px solid #0282F9;
-            height: auto;
+        h3 {
+          color: #0282f9;
+          margin-right: 20px;
+          align-self: center;
         }
 
-        div.social {
-            display: flex;
-
-            h3 {
-                color: #0282F9;
-                margin-right: 20px;
-                align-self: center;
-            }
-
-            img {
-                margin: 0px 10px;
-            }
-
+        img {
+          margin: 0px 10px;
         }
+      }
     }
   }
 }

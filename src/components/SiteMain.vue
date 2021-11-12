@@ -52,7 +52,7 @@ export default {};
 #site-main {
   width: 100%;
   height: 215px;
-  background-color: violet;
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
   .content-goes {

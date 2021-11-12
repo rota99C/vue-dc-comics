@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <site-header/>
+    <image-hero/>
     <site-main/>
     <site-footer/>
     
@@ -13,6 +14,8 @@
 import SiteHeader from './components/SiteHeader.vue'
 import SiteMain from './components/SiteMain.vue'
 import SiteFooter from './components/SiteFooter.vue'
+import ImageHero from './components/ImageHero.vue'
+
 
 
 export default {
@@ -20,7 +23,8 @@ export default {
   components: {
     SiteHeader,
     SiteMain,
-    SiteFooter
+    SiteFooter,
+    ImageHero
     
   }
 }
