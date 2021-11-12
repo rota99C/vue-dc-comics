@@ -25,5 +25,6 @@ img {
 }
 h5 {
   color: white;
+  font-weight: lighter;
 }
 </style>

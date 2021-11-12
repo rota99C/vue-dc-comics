@@ -12,6 +12,9 @@
           :series="comic.series"
         />
       </div>
+      <div class="container-button">
+        <div class="load-more"><a href="">LOAD MORE</a></div>
+      </div>
 
       <!-- <img :src="comic.thumb" alt="" /> -->
       <!-- <h3>{{ comic.series }}</h3> -->
@@ -39,13 +42,21 @@
           </li>
           <li>
             <a href="">
-              <img src="../assets/img/buy-comics-shop-locator.png" alt="" />
+              <img
+                class="shop-locator"
+                src="../assets/img/buy-comics-shop-locator.png"
+                alt=""
+              />
               <p>COMIC SHOP LOCATOR</p>
             </a>
           </li>
           <li>
             <a href="">
-              <img src="../assets/img/buy-dc-power-visa.svg" alt="" />
+              <img
+                class="visa"
+                src="../assets/img/buy-dc-power-visa.svg"
+                alt=""
+              />
               <p>DC POWER VISA</p>
             </a>
           </li>
@@ -158,8 +169,8 @@ export default {
 <style lang="scss">
 #site-main {
   width: 100%;
-
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   .current-serie {
     width: 190px;
     height: 40px;
@@ -182,7 +193,7 @@ export default {
   .content-goes {
     height: auto;
     background-color: black;
-    display: flex;
+    padding: 30px 0px;
 
     div.container {
       width: 1000px;
@@ -190,6 +201,29 @@ export default {
       display: flex;
       flex-wrap: wrap;
       height: 100%;
+    }
+
+    div.container-button {
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    div.load-more {
+      color: white;
+      background-color: #0282f9;
+      width: 150px;
+      font-size: 0.9em;
+      text-align: center;
+      padding: 5px 0px;
+
+      a {
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+      }
     }
   }
 
@@ -204,7 +238,7 @@ export default {
 
       ul {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         height: 100%;
 
@@ -215,9 +249,23 @@ export default {
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 0.8em;
+
+            a:visited {
+              color: white;
+            }
 
             img {
-              width: 20%;
+              width: 40px;
+              height: 45px;
+              margin-right: 10px;
+            }
+
+            img.shop-locator {
+              height: 40px;
+              width: 35px;
             }
           }
         }
